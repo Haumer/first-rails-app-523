@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FirstRailsApp523</title>
+    <title>SOMETHINGELSE</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,25 @@
   </head>
 
   <body>
+    <div style="background-color: red; width: 100vw; height: 100px;">
+      <ul>
+        <li>
+          <%= link_to "About", about_path %>
+        </li>
+        <li>
+          <%= link_to "Contact", contact_us_path, class: "contact_link" %>
+        </li>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+      </ul>
+    </div>
     <%= yield %>
+
+    <style>
+      .contact_link {
+        background: green;
+      }
+    </style>
   </body>
 </html>
